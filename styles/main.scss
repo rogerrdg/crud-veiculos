@@ -23,25 +23,23 @@ header{
 	background-color: $theme-primary;
 }
 // -------------------------------------- Buttons
-// .btn{
-// 	color:$white !important;
-// 	font-family:$fontfamily;
-// 	font-size:.75em;
-// 	font-weight:600;
-// 	padding:0 32px;
-// 	margin:0;
-// 	box-shadow:none !important;
-// 	&.btn__full{
-// 		width:calc(100% - 16px);
-// 	}
-// }
-//
-// .btn__success{
-// 	background-color: $success-color !important;
-// }
-// .btn__warning{
-// 	background-color: $warning-color !important;
-// }
+.btn{
+	color:$white !important;
+	font-family:$fontfamily;
+	padding: 8px 12px;
+	font-size:.85em;
+	font-weight:600;
+	&.btn-full{
+		width:100%;
+	}
+}
+
+.btn-success{
+	background-color: $success-color !important;
+}
+.btn-danger{
+	background-color: $warning-color !important;
+}
 // -------------------------------------- Icons
 md-icon{
   min-width:8px;
@@ -62,12 +60,7 @@ input[type="text"]{
 }
 // -------------------------------------- Options
 .list__options{
-	margin:20px 0;
-	button{
-		& + button{
-			margin-left:24px;
-		}
-	}
+	padding:20px 0;
 }
 .search__input{
 	border-radius:3px 0 0 3px !important;
@@ -107,18 +100,20 @@ input[type="text"]{
 	font-size:.75em;
 
 	color:$theme-font-color;
-	td{padding:8px;}
+	td{padding:8px;height:64px;}
 	thead{
 		background-color:#f8fafc;
 		font-weight:600;
-
+		td{padding:8px;}
 	}
 	tbody{
 		font-weight:400;
+		td{padding:8px;height:64px;}
 		tr{
+			background-color:$white ;
 			border:solid 1px $theme-borders;
 			&:hover{
-				background-color:#F1F4F9 !important;
+				background-color:#D8E9FB !important;
 				border:solid 1px #8BC8F6 !important;
 			}
 		}

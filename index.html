@@ -37,14 +37,18 @@
 		<div class="container">
 			<div >
         <!-- List Options -->
-				<div ng-controller="modalAccountFormController">
-					<button class="btn btn-success" ng-click="showForm()">
-            Novo Carro
-        	</button>
-					<button class="btn btn-danger" ng-click="delete()" >
-            Excluir Carro
-        	</button>
-					<input type="text" ng-model="search.term" placeholder="Search" />
+				<div class="row list__options"  >
+          <div class="col-md-8" ng-controller="modalAccountFormController">
+              <button class="btn  btn-success" ng-click="showForm()">
+                Novo Carro
+          	</button>
+            <button class="btn btn-danger" ng-click="delete()" >
+              Excluir Carro
+            </button>
+          </div>
+					<div class="col-md-4 form-group" >
+            <input type="text" ng-model="search.term" placeholder="Search" />
+          </div>
 				</div>
       <!-- DataTable -->
 			<table  class="list__data__table">
@@ -90,9 +94,9 @@
 			</table>
       <!-- Pagination -->
 			<!-- <pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit"></pagination> -->
-			<pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit"></pagination>
+			<pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit" ></pagination>
 			<pre>{{ items.length }}</pre>
-			<!-- <pre>{{ items | json }}</pre> -->
+			<pre>{{ items | json }}</pre>
 			<pre>{{ selected | json }}</pre>
 </div>
 

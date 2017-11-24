@@ -155,7 +155,7 @@ a {
 
 body {
   overflow-x: hidden;
-  background-color: #f1f4f9;
+  background-color: #F1F4F9;
   height: auto;
   min-height: 100vh; }
 
@@ -166,6 +166,21 @@ body {
 
 header {
   background-color: #2687E9; }
+
+.btn {
+  color: white !important;
+  font-family: "Open Sans", sans-serif;
+  padding: 8px 12px;
+  font-size: .85em;
+  font-weight: 600; }
+  .btn.btn-full {
+    width: 100%; }
+
+.btn-success {
+  background-color: #4ABA58 !important; }
+
+.btn-danger {
+  background-color: #B44848 !important; }
 
 md-icon {
   min-width: 8px;
@@ -187,9 +202,7 @@ input[type="text"] {
   text-indent: 4px; }
 
 .list__options {
-  margin: 20px 0; }
-  .list__options button + button {
-    margin-left: 24px; }
+  padding: 20px 0; }
 
 .search__input {
   border-radius: 3px 0 0 3px !important; }
@@ -199,7 +212,7 @@ input[type="text"] {
   width: 40px;
   min-width: 40px;
   padding: 0px;
-  background-color: #f1f4f9;
+  background-color: #F1F4F9;
   border: solid 1px #c9d3dd;
   border-left: 0px;
   border-radius: 0 3px 3px 0; }
@@ -224,16 +237,23 @@ input[type="text"] {
   font-size: .75em;
   color: #385A7B; }
   .list__data__table td {
-    padding: 8px; }
+    padding: 8px;
+    height: 64px; }
   .list__data__table thead {
     background-color: #f8fafc;
     font-weight: 600; }
+    .list__data__table thead td {
+      padding: 8px; }
   .list__data__table tbody {
     font-weight: 400; }
+    .list__data__table tbody td {
+      padding: 8px;
+      height: 64px; }
     .list__data__table tbody tr {
+      background-color: white;
       border: solid 1px #c9d3dd; }
       .list__data__table tbody tr:hover {
-        background-color: #F1F4F9 !important;
+        background-color: #D8E9FB !important;
         border: solid 1px #8BC8F6 !important; }
 
 .list__data__img {
