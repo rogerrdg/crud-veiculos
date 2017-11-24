@@ -170,7 +170,7 @@ header {
 .btn {
   color: white !important;
   font-family: "Open Sans", sans-serif;
-  padding: 8px 12px;
+  padding: 8px 32px;
   font-size: .85em;
   font-weight: 600; }
   .btn.btn-full {
@@ -202,7 +202,8 @@ input[type="text"] {
   text-indent: 4px; }
 
 .list__options {
-  padding: 20px 0; }
+  padding: 20px 0;
+  display: flex; }
 
 .search__input {
   border-radius: 3px 0 0 3px !important; }
@@ -222,11 +223,9 @@ input[type="text"] {
 .list__create__item {
   background-color: rgba(0, 0, 0, 0.06);
   border-radius: 3px;
-  padding: 16px;
-  margin-bottom: 24px; }
+  padding: 16px; }
   .list__create__item input {
-    margin: 8px !important;
-    width: calc(100% - 16px) !important; }
+    width: 100% !important; }
   .list__create__item .btn {
     margin: 8px; }
 
@@ -262,5 +261,8 @@ input[type="text"] {
   border-radius: 4px;
   background-size: cover;
   background-position: center center; }
+
+.modal-body {
+  padding: 0 !important; }
 
 /*# sourceMappingURL=main.css.map */

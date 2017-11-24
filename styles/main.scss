@@ -26,7 +26,7 @@ header{
 .btn{
 	color:$white !important;
 	font-family:$fontfamily;
-	padding: 8px 12px;
+	padding: 8px 32px;
 	font-size:.85em;
 	font-weight:600;
 	&.btn-full{
@@ -61,6 +61,7 @@ input[type="text"]{
 // -------------------------------------- Options
 .list__options{
 	padding:20px 0;
+	display:flex;
 }
 .search__input{
 	border-radius:3px 0 0 3px !important;
@@ -83,10 +84,9 @@ input[type="text"]{
 	background-color:$lightergrey;
 	border-radius:3px;
 	padding:16px;
-	margin-bottom:24px;
 	input{
-		margin:8px !important;
-		width:calc(100% - 16px) !important;
+
+		width:100% !important;
 	}
 	& .btn{
 		margin:8px;
@@ -125,4 +125,8 @@ input[type="text"]{
 	border-radius: 4px;
 	background-size: cover;
 	background-position:center center;
+}
+// -------------------------------------- Modal
+.modal-body {
+    padding: 0 !important;
 }

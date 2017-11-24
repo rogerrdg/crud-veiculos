@@ -37,8 +37,8 @@
 		<div class="container">
 			<div >
         <!-- List Options -->
-				<div class="row list__options"  >
-          <div class="col-md-8" ng-controller="modalAccountFormController">
+				<div class="list__options"  >
+          <div ng-controller="modalAccountFormController">
               <button class="btn  btn-success" ng-click="showForm()">
                 Novo Carro
           	</button>
@@ -46,7 +46,7 @@
               Excluir Carro
             </button>
           </div>
-					<div class="col-md-4 form-group" >
+					<div  >
             <input type="text" ng-model="search.term" placeholder="Search" />
           </div>
 				</div>
@@ -94,10 +94,10 @@
 			</table>
       <!-- Pagination -->
 			<!-- <pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit"></pagination> -->
-			<pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit" ></pagination>
-			<pre>{{ items.length }}</pre>
+			<pagination page="currentPage" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true" direction-links="false" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit" ></pagination>
+			<!-- <pre>{{ items.length }}</pre>
 			<pre>{{ items | json }}</pre>
-			<pre>{{ selected | json }}</pre>
+			<pre>{{ selected | json }}</pre> -->
 </div>
 
 

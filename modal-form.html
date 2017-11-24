@@ -4,29 +4,29 @@
 <form name="form.userForm" ng-submit="submitForm()" novalidate>
     <div class="modal-body">
 				<section class=" row list__create__item" >
-					<div class="col-md-4">
+					<div class="col-md-6 form-group">
             <label>Placa</label>
 						<input type="text" ng-model="itemToAdd.placa" placeholder="Ex.: AAA-1234" required/>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 form-group">
             <label>Marca/Fabricante</label>
 						<input type="text" ng-model="itemToAdd.marca" placeholder="Ex.: Fiat" required/>
 					</div>
-          <div class="col-md-4 form-group">
+          <div class="col-md-6 form-group">
             <label>Modelo do veículo</label>
 						<input type="text" ng-model="itemToAdd.modelo" placeholder="Ex.: Strada Adventure" required/>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 form-group">
             <label>Combustível</label>
 						<input type="text" ng-model="itemToAdd.combustivel" placeholder="Ex.: Gasolina" required/>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 form-group">
             <label>Valor FIPE</label>
 						<input type="text" ng-model="itemToAdd.valor" placeholder="Somente Reais. Ex.: 20000" />
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 form-group">
             <label>URL da imagem</label>
-						<input type="text" class="btn btn-default" ng-model="itemToAdd.imagem"  />
+						<input type="text" ng-model="itemToAdd.imagem" placeholder="Ex.: http://www.exemplo.com/imagem.jpg" />
 					</div>
           <!-- <div class="col-md-4">
             <label>Foto do veículo</label>
