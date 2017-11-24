@@ -105,8 +105,6 @@ app.controller("modalAccountFormController", ['$scope', '$modal', '$log',
     function ($scope, $modal, $log) {
 
         $scope.showForm = function () {
-            $scope.message = "Show Form Button Clicked";
-            console.log($scope.message);
 
             var modalInstance = $modal.open({
                 templateUrl: 'modal-form.html',
