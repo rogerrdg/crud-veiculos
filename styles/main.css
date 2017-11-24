@@ -235,4 +235,11 @@ input[type="text"] {
     .list__data__table tbody td {
       padding: 16px 4px; }
 
+.list__data__img {
+  width: 64px;
+  height: 32px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center center; }
+
 /*# sourceMappingURL=main.css.map */
