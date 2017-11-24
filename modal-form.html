@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h3>Adicionar Veículo</h3>
+</div>
+<form name="form.userForm" ng-submit="submitForm()" novalidate>
+    <div class="modal-body">
+				<section class=" row list__create__item" >
+					<div class="col-md-4">
+            <label>Placa</label>
+						<input type="text" ng-model="itemToAdd.placa" placeholder="Ex.: AAA-1234" required/>
+					</div>
+					<div class="col-md-4">
+            <label>Marca/Fabricante</label>
+						<input type="text" ng-model="itemToAdd.marca" placeholder="Ex.: Fiat" required/>
+					</div>
+          <div class="col-md-4">
+            <label>Modelo do veículo</label>
+						<input type="text" ng-model="itemToAdd.modelo" placeholder="Ex.: Strada Adventure" required/>
+					</div>
+					<div class="col-md-4">
+            <label>Combustível</label>
+						<input type="text" ng-model="itemToAdd.combustivel" placeholder="Ex.: Gasolina" required/>
+					</div>
+					<div class="col-md-4">
+            <label>Valor FIPE</label>
+						<input type="text" ng-model="itemToAdd.valor" placeholder="Somente Reais. Ex.: 20000" />
+					</div>
+					<div class="col-md-4">
+            <label>Foto do Veículo</label>
+						<input type="file" class="btn btn-default" ng-model="itemToAdd.imagem"  />
+					</div>
+				</section>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+      <button type="submit" class="btn btn-success" ng-click="add(itemToAdd)" ng-disabled="form.userForm.$invalid">Adicionar</button>
+
+    </div>
+</form>
