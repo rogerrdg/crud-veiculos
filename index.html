@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" ng-app="angularTable" ng-cloak>
+  <head>
+    <meta charset="utf-8">
+    <title>Search Sort and Pagination in Angular js</title>
+
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+	</head>
+  <body ng-controller="PageCtrl">
+
+		<div class="container">
+			<div >
+				<div>
+					<button class="btn btn-success"  ng-click="showNew = !showNew">
+            Novo Carro
+        	</button>
+					<button class="btn btn-danger" ng-click="delete()" >
+            Excluir Carro
+        	</button>
+					<input type="text" ng-model="search.term" placeholder="Search" />
+				</div>
+				<!-- Add -->
+				<section class=" row list__create__item" ng-if="showNew">
+					<div class="col-md-4">
+						<input type="text" ng-model="itemToAdd.placa" placeholder="placa"/>
+					</div>
+					<div class="col-md-4">
+						<input type="text" ng-model="itemToAdd.modelo" placeholder="modelo"/>
+					</div>
+					<div class="col-md-4">
+						<input type="text" ng-model="itemToAdd.marca" placeholder="marca"/>
+					</div>
+					<div class="col-md-4">
+						<input type="text" ng-model="itemToAdd.combustivel" placeholder="combustivel"/>
+					</div>
+
+					<div class="col-md-4">
+						<input type="text" ng-model="itemToAdd.valor" placeholder="valor"/>
+					</div>
+					<div class="col-md-4">
+						<input type="text" ng-model="itemToAdd.imagem" placeholder="imagem"/>
+					</div>
+					<div class="col-md-4 col-offset-md-4">
+						<button class="btn btn-success" ng-click="add(itemToAdd)">Adicionar carro</button>
+					</div>
+
+				</section>
+
+			<table  class="list__data__table">
+				<thead>
+				<tr>
+					<td>
+						<input type="checkbox" aria-label="Select All"
+                         ng-checked="isChecked()"
+                         md-indeterminate="isIndeterminate()"
+                         ng-click="toggleAll()" >
+            </input>
+					</td>
+					<td>Placa</td>
+					<td>Modelo</td>
+					<td>Marca</td>
+					<td>Foto</td>
+					<td>Combustível</td>
+					<td>Valor</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in filtered = items | filter:search.term | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+					<td >
+						<input type="checkbox" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">{{item.placa}}</input>
+					</td>
+					<td>{{item.placa}}</td>
+					<td >{{item.modelo}}</td>
+					<td>{{item.marca}}</td>
+					<td>
+						<span ng-if="item.imagem != null">Imagem</span>
+						<span ng-if="item.imagem == null">Sem foto</span>
+					</td>
+					<td>{{item.combustivel}}</td>
+					<td>{{item.valor}}</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- <pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit"></pagination> -->
+			<pagination page="currentPage" max-size="{{$scope.totalItems / $scope.entryLimit}}" total-items="totalItems" items-per-page="entryLimit"></pagination>
+			<pre>{{ items.length }}</pre>
+			<!-- <pre>{{ items | json }}</pre> -->
+			<pre>{{ selected | json }}</pre>
+</div>
+
+
+		<script src="lib/angular/angular.js"></script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js" type="text/javascript"></script>
+		<script src="app.js"></script>
+  </body>
+</html>

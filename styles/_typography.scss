@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+$fontfamily: 'Open Sans', sans-serif;
+// ------------------------------------------------------------------ Default Typography
+.default-style-fonts{
+	font-family:$fontfamily;
+	font-weight:400;
+	color:$theme-font-color;
+	margin:0;
+	padding:0;
+	line-height: auto;
+}
+h1{
+	@extend .default-style-fonts;
+	font-size:1.75em;
+}
+h2{
+	@extend .default-style-fonts;
+	font-size:1.375em;
+}
+
+h3{
+	@extend .default-style-fonts;
+	font-size:1.25em;
+}
+
+h4{
+	@extend .default-style-fonts;
+	font-size:1.125em;
+}
+
+h5{
+	@extend .default-style-fonts;
+	font-size:1.0em;
+}
+
+h6{
+	@extend .default-style-fonts;
+	font-size:0.875em;
+}
+p{
+	@extend .default-style-fonts;
+	font-size:0.825em !important;
+}
+
+// ------------------------------------------------------------------ Variant Styles
+a {
+	outline: none;
+	text-decoration: none;
+	color:$mediumgrey;
+ 	&:visited{
+ 		color:$mediumgrey;
+ 	}
+}

@@ -1,0 +1,122 @@
+
+// -------------------------------------- Main vars
+@import "_normalize";
+@import "_colors";
+@import "_typography";
+// -------------------------------------- Grid
+
+body{
+	overflow-x:hidden;
+	background-color: $backgroundcolor;
+	height:auto;
+	min-height: 100vh;
+}
+
+.container{
+	margin:0 auto;
+	width:100%;
+	// max-width:1259px;
+	max-width:799px;
+}
+// -------------------------------------- Header
+header{
+	background-color: $theme-primary;
+}
+// -------------------------------------- Buttons
+// .btn{
+// 	color:$white !important;
+// 	font-family:$fontfamily;
+// 	font-size:.75em;
+// 	font-weight:600;
+// 	padding:0 32px;
+// 	margin:0;
+// 	box-shadow:none !important;
+// 	&.btn__full{
+// 		width:calc(100% - 16px);
+// 	}
+// }
+//
+// .btn__success{
+// 	background-color: $success-color !important;
+// }
+// .btn__warning{
+// 	background-color: $warning-color !important;
+// }
+// -------------------------------------- Icons
+md-icon{
+  min-width:8px;
+  min-height:8px;
+}
+.ico16{width:16px !important;height:16px !important;}
+// -------------------------------------- Inputs
+input[type="text"]{
+	border-radius:3px ;
+	border:solid 1px $theme-borders;
+	font-family:$fontfamily;
+	font-size:.75em;
+	font-weight:600;
+	color:$theme-font-color;
+	height:36px;
+	padding:4px;
+	text-indent: 4px;
+}
+// -------------------------------------- Options
+.list__options{
+	margin:20px 0;
+	button{
+		& + button{
+			margin-left:24px;
+		}
+	}
+}
+.search__input{
+	border-radius:3px 0 0 3px !important;
+}
+.search__button{
+	margin:0;
+	width:40px;
+	min-width:40px;
+	padding:0px;
+	background-color: $backgroundcolor;
+	border:solid 1px $theme-borders;
+	border-left:0px;
+	border-radius:0 3px 3px 0;
+	md-icon{
+		color:$theme-font-color;
+	}
+}
+// -------------------------------------- Add data
+.list__create__item{
+	background-color:$lightergrey;
+	border-radius:3px;
+	padding:16px;
+	margin-bottom:24px;
+	input{
+		margin:8px !important;
+		width:calc(100% - 16px) !important;
+	}
+	& .btn{
+		margin:8px;
+	}
+}
+// -------------------------------------- Data Table
+.list__data__table{
+	width:100%;
+	border:solid 1px $theme-borders;
+	font-family:$fontfamily;
+	font-size:.75em;
+
+	color:$theme-font-color;
+	thead{
+		background-color:#f8fafc;
+		font-weight:600;
+		td{padding:16px 4px;}
+	}
+	tbody{
+		font-weight:400;
+		tr{
+			border:solid 1px $theme-borders;
+		}
+		td{padding:16px 4px;}
+	}
+}
