@@ -223,17 +223,18 @@ input[type="text"] {
   font-family: "Open Sans", sans-serif;
   font-size: .75em;
   color: #385A7B; }
+  .list__data__table td {
+    padding: 8px; }
   .list__data__table thead {
     background-color: #f8fafc;
     font-weight: 600; }
-    .list__data__table thead td {
-      padding: 16px 4px; }
   .list__data__table tbody {
     font-weight: 400; }
     .list__data__table tbody tr {
       border: solid 1px #c9d3dd; }
-    .list__data__table tbody td {
-      padding: 16px 4px; }
+      .list__data__table tbody tr:hover {
+        background-color: #F1F4F9 !important;
+        border: solid 1px #8BC8F6 !important; }
 
 .list__data__img {
   width: 64px;

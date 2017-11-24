@@ -107,17 +107,21 @@ input[type="text"]{
 	font-size:.75em;
 
 	color:$theme-font-color;
+	td{padding:8px;}
 	thead{
 		background-color:#f8fafc;
 		font-weight:600;
-		td{padding:16px 4px;}
+
 	}
 	tbody{
 		font-weight:400;
 		tr{
 			border:solid 1px $theme-borders;
+			&:hover{
+				background-color:#F1F4F9 !important;
+				border:solid 1px #8BC8F6 !important;
+			}
 		}
-		td{padding:16px 4px;}
 	}
 }
 .list__data__img{

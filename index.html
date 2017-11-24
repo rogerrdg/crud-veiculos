@@ -50,12 +50,10 @@
 			<table  class="list__data__table">
 				<thead>
   				<tr>
-  					<td >
-              <div class="checkbox">
-                <label>
+  					<td width="48">
+
                 <input type="checkbox" aria-label="Select All" ng-checked="isChecked()" md-indeterminate="isIndeterminate()" ng-click="toggleAll()" >
-              </label>
-              </div>
+
 
   					</td>
   					<td>Placa</td>
@@ -69,11 +67,11 @@
   			<tbody>
   				<tr ng-repeat="item in filtered = items | filter:search.term | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
   					<td >
-              <div class="checkbox" >
-                <label>
+
+
   						        <input type="checkbox" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
-                <label>
-              </div>
+
+
   					</td>
   					<td>{{item.placa}}</td>
   					<td >{{item.modelo}}</td>
