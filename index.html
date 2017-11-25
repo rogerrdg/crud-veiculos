@@ -71,7 +71,7 @@
   					<td >
               <div class="checkbox" >
                 <label>
-  						        <input type="checkbox" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)"> 
+  						        <input type="checkbox" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
                 <label>
               </div>
   					</td>
@@ -79,11 +79,14 @@
   					<td >{{item.modelo}}</td>
   					<td>{{item.marca}}</td>
   					<td>
-  						<span ng-if="item.imagem != null">Imagem</span>
+              <div class="list__data__img" ng-if="item.imagem != null" ng-style="{ 'background-image': 'url(' + '{{item.imagem}}' + ')' }">
+                <!-- <img ng-src="{{item.imagem}}"> -->
+              </div>
+
   						<span ng-if="item.imagem == null">Sem foto</span>
   					</td>
   					<td>{{item.combustivel}}</td>
-  					<td>R${{item.valor}}</td>
+  					<td>{{item.valor | currency:'R$'}}</td>
   				</tr>
   			</tbody>
 			</table>
