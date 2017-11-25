@@ -46,11 +46,32 @@ app.controller('PageCtrl', ['$scope', '$http', 'filterFilter', function ($scope,
 	};
  	// Remove item
 
-	$scope.delete = function (item, selected){
+	$scope.delete = function ()
+	{
+		var array_index_remove = []; //Array de indices que serão removidos
 
-		var index = $scope.selected.indexOf(item);
- 		$scope.selected.splice(index, 1);
+		var _idx = 0;
+		$scope.items.forEach(element => { // Loop atraves dos itens da lista
+			var idx_arr = $scope.selected.filter(el => el.placa === element.placa);
+			if(idx_arr.length > 0) //Obtem o índice o item a ser removido
+				array_index_remove.push(_idx);
+			_idx++;
+		});
+
+		// Orderna a lsita de index de forma crescente
+		// para não zuar os índices
+		array_index_remove.sort(function(a,b){ return b - a; }); 
+
+
+		for (var i = 0; i < array_index_remove.length; i++) 
+		{
+			if(array_index_remove[i] == 0) // Quando só tem um item na lista
+				$scope.items.shift();
+			else
+				$scope.items.splice(array_index_remove[i],1);
+		}
 	}
+
 
  // ----------------------------------------------------- Select
 
