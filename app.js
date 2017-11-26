@@ -1,6 +1,6 @@
 var app = angular.module('angularTable', ['ui.bootstrap'])
 
-app.controller('PageCtrl', ['$scope', '$http', 'filterFilter', function ($scope, $http, filterFilter) {
+app.controller('ListCtrl', ['$scope', '$http', 'filterFilter', function ($scope, $http, filterFilter) {
 
 	$scope.items = [];
 	$http.get("veiculos.json").success(function(response){
@@ -60,10 +60,10 @@ app.controller('PageCtrl', ['$scope', '$http', 'filterFilter', function ($scope,
 
 		// Orderna a lsita de index de forma crescente
 		// para não zuar os índices
-		array_index_remove.sort(function(a,b){ return b - a; }); 
+		array_index_remove.sort(function(a,b){ return b - a; });
 
 
-		for (var i = 0; i < array_index_remove.length; i++) 
+		for (var i = 0; i < array_index_remove.length; i++)
 		{
 			if(array_index_remove[i] == 0) // Quando só tem um item na lista
 				$scope.items.shift();
